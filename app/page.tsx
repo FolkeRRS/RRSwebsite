@@ -27,13 +27,13 @@ export default function Page() {
 <section className="min-h-[85vh] w-full flex flex-col items-center justify-center text-center px-4 pt-28">
 
 {/* Ljud • Ljus • Bild */}
-<p className="uppercase tracking-[0.32em] text-neutral-500 text-xs mb-5">
+<p className="uppercase tracking-[0.32em] text-neutral-500 text-s mb-5">
   Ljud • Ljus • Bild
 </p>
 
 {/* Rubrik – centrerad optiskt oberoende av content-bredd */}
-<h1 className="text-[34px] md:text-[50px] font-light leading-tight max-w-none text-neutral-900">
-  Teknik som smälter in,<br />
+<h1 className="text-[34px] md:text-[55px] font-light leading-tight max-w-none text-neutral-900">
+  Teknik som smälter in<br />
   upplevelser som står ut.
 </h1>
 
