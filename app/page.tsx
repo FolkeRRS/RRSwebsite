@@ -35,14 +35,15 @@ export default function Page() {
 
       {/* HERO */}
       <section className="min-h-[85vh] w-full flex flex-col items-center justify-center text-center px-6 pt-24">
-        <h1 className="text-[32px] md:text-[48px] font-light leading-[1.25] text-neutral-900">
-          Teknik som smälter in,<br />
-          upplevelser som står ut.
-        </h1>
-
-        <p className="uppercase tracking-[0.32em] text-neutral-500 text-xs mt-4">
+        {/* 🔹 Ljud • Ljus • Bild ovanför rubriken */}
+        <p className="uppercase tracking-[0.32em] text-neutral-500 text-xs mb-4">
           Ljud • Ljus • Bild
         </p>
+
+        <h1 className="text-[32px] md:text-[48px] font-light leading-[1.25] text-neutral-900">
+          Teknik som smälter in<br />
+          upplevelser som står ut.
+        </h1>
 
         <div className="flex gap-5 mt-10">
           <a
