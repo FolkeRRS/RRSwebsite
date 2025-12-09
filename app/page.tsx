@@ -4,62 +4,50 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-white text-neutral-900 font-sans overflow-x-hidden">
 
-      {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl border-b border-white/30">
-        <div className="max-w-6xl mx-auto px-8 py-5 flex items-center justify-between">
-          {/* R R S vänster */}
-          <p className="text-xs uppercase tracking-[0.38em] text-neutral-600">
+      {/* HEADER – vit, nav 100% centrerad, R R S påverkar inte mitten */}
+      <header className="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-neutral-200">
+        <div className="relative mx-auto max-w-6xl px-8 py-5 flex items-center justify-center">
+          {/* Logga till vänster, absolut positionerad i containern */}
+          <p className="absolute left-1 text-s uppercase tracking-[0.38em] text-neutral-600">
             R R S
           </p>
 
-          {/* Meny i mitten */}
-          <nav className="flex gap-10 text-sm font-light text-neutral-700">
-            <a href="/" className="hover:text-black transition">
-              Hem
-            </a>
-            <a href="#projects" className="hover:text-black transition">
-              Projekt
-            </a>
-            <a href="#services" className="hover:text-black transition">
-              Om oss
-            </a>
-            <a href="/kontakt" className="hover:text-black transition">
-              Kontakt
-            </a>
+          {/* Nav exakt centrerad i containern (som är centrerad mot skärmen) */}
+          <nav className="flex gap-20 text-sm font-light text-neutral-700">
+            <a href="/" className="hover:text-black transition">Hem</a>
+            <a href="#projects" className="hover:text-black transition">Projekt</a>
+            <a href="#services" className="hover:text-black transition">Om oss</a>
+            <a href="/kontakt" className="hover:text-black transition">Kontakt</a>
           </nav>
-
-          {/* Tom div för perfekt centrering */}
-          <div className="w-[40px] opacity-0">•</div>
         </div>
       </header>
 
       {/* HERO */}
-      <section className="min-h-[85vh] w-full flex flex-col items-center justify-center text-center px-6 pt-24">
-        {/* 🔹 Ljud • Ljus • Bild ovanför rubriken */}
-        <p className="uppercase tracking-[0.32em] text-neutral-500 text-xs mb-4">
-          Ljud • Ljus • Bild
-        </p>
+      {/* HERO – centrerad efter skärmens mitt, inte containerbredd */}
+<section className="min-h-[85vh] w-full flex flex-col items-center justify-center text-center px-4 pt-28">
 
-        <h1 className="text-[32px] md:text-[48px] font-light leading-[1.25] text-neutral-900">
-          Teknik som smälter in<br />
-          upplevelser som står ut.
-        </h1>
+{/* Ljud • Ljus • Bild */}
+<p className="uppercase tracking-[0.32em] text-neutral-500 text-xs mb-5">
+  Ljud • Ljus • Bild
+</p>
 
-        <div className="flex gap-5 mt-10">
-          <a
-            href="/kontakt"
-            className="px-7 py-3 rounded-full bg-black text-white text-sm hover:bg-neutral-900 transition"
-          >
-            Boka produktion
-          </a>
-          <a
-            href="#projects"
-            className="px-7 py-3 rounded-full border border-neutral-300 text-sm hover:border-neutral-900 transition"
-          >
-            Se projekt
-          </a>
-        </div>
-      </section>
+{/* Rubrik – centrerad optiskt oberoende av content-bredd */}
+<h1 className="text-[34px] md:text-[50px] font-light leading-tight max-w-none text-neutral-900">
+  Teknik som smälter in,<br />
+  upplevelser som står ut.
+</h1>
+
+<div className="flex gap-6 mt-10">
+  <a href="/kontakt" className="px-8 py-3 rounded-full bg-black text-white text-sm hover:bg-neutral-900 transition">
+    Boka produktion
+  </a>
+  <a href="#projects" className="px-8 py-3 rounded-full border border-neutral-300 text-sm hover:border-neutral-900 transition">
+    Se projekt
+  </a>
+</div>
+
+</section>
+
 
       {/* TJÄNSTER */}
       <section
