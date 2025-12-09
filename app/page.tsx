@@ -6,21 +6,25 @@ export default function Page() {
 
       {/* HEADER – vit, nav 100% centrerad, R R S påverkar inte mitten */}
       <header className="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-neutral-200">
-        <div className="relative mx-auto max-w-6xl px-8 py-5 flex items-center justify-center">
-          {/* Logga till vänster, absolut positionerad i containern */}
-          <p className="absolute left-1 text-s uppercase tracking-[0.38em] text-neutral-600">
-            R R S
-          </p>
+  <div className="relative mx-auto max-w-6xl px-4 md:px-8 py-5 flex items-center justify-between">
+    {/* R R S – alltid till vänster, bryts inte i två rader */}
+    <p className="text-s uppercase tracking-[0.38em] text-neutral-600 whitespace-nowrap">
+      R R S
+    </p>
 
-          {/* Nav exakt centrerad i containern (som är centrerad mot skärmen) */}
-          <nav className="flex gap-20 text-sm font-light text-neutral-700">
-            <a href="/" className="hover:text-black transition">Hem</a>
-            <a href="#projects" className="hover:text-black transition">Projekt</a>
-            <a href="#services" className="hover:text-black transition">Om oss</a>
-            <a href="/kontakt" className="hover:text-black transition">Kontakt</a>
-          </nav>
-        </div>
-      </header>
+    {/* Meny
+        - På mobil: står till höger (flex mellan logga & meny)
+        - På desktop (md+): absolut centrerad i skärmen */}
+    <nav className="flex gap-6 md:gap-20 text-sm font-light text-neutral-700
+                    md:absolute md:left-1/2 md:-translate-x-1/2">
+      <a href="/" className="hover:text-black transition">Hem</a>
+      <a href="#projects" className="hover:text-black transition">Projekt</a>
+      <a href="#services" className="hover:text-black transition">Om oss</a>
+      <a href="/kontakt" className="hover:text-black transition">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
 
       {/* HERO */}
       {/* HERO – centrerad efter skärmens mitt, inte containerbredd */}
